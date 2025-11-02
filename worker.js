@@ -112,7 +112,7 @@ export default {
                 return { user, pass, host, port: +port };
             })() : null;
 
-			const PROXY_IP = proxyParam ? String(proxyParam) : (env.PROXY_IP || 'bpb.yousef.isegaro.com'); // 从环境变量读取默认值
+			const PROXY_IP = proxyParam ? String(proxyParam) : (env.PROXYIP || 'bpb.yousef.isegaro.com'); // 从环境变量读取默认值
 
 			const getOrder = () => {
 				if (pathBasedOrder) return pathBasedOrder;
@@ -321,4 +321,5 @@ export default {
 
 		return Response.redirect('https://t.me/jiliankeji', 302);
 	}
+
 };
